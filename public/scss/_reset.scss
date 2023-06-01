@@ -1,0 +1,10 @@
+* {margin: 0; padding: 0;}
+ul,ol,li {list-style: none;}
+a {text-decoration: none; cursor: pointer;}
+img.video {vertical-align: top;}
+h2{font-size: 1;}
+@font-face {
+    src: url("../font/razerf5.otf");
+    font-family: "razerf5";
+}
+body {line-height: 1; background-color: #111; font-family: 'razerf5', 'Noto Sans KR';}

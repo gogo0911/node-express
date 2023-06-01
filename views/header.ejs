@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <% if(cssFiles.length !== 0) { %>
+        <% for(let i=0; i<cssFiles.length; i++) { %>
+            <link rel="stylesheet" href="/css/<%- cssFiles[i] %>">
+        <% } %>
+    <% } %>
+</head>
+<body>
+<div class="header">
+    <div class="center">
+        <div class="top_header">
+            <div class="m_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="m_gnbWrap">
+                <h2>RAZER</h2>
+                <ul class="m_gnb">
+                    <li>
+                        <a href="/store">Store</a>
+                    </li>
+                    <li>
+                        <a href="/mobile">Mobile</a>
+                    </li>
+                    <li>
+                        <a href="#">Lisfstyle</a>
+                    </li>
+                    <li>
+                        <a href="#">Service</a>
+                    </li>
+                    <li>
+                        <a href="#">Community</a>
+                    </li>
+                </ul>
+                <div class="m_close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <ul class="m_join">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Join</a></li>
+                </ul>
+            </div>
+            </ul>
+            <h1 class="logo">
+                <a href="/">
+                    <img src="img/logo.png">
+                </a>
+            </h1>
+            <ul class="join">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </div>
+        <div class="bot_header">
+            <div class="gnbWrap">
+                <div class="gnbBg"></div>
+                <ul class="gnb">
+                    <li>
+                        <a href="/store">Store</a>
+                        <ul class="sub">
+                            <li><a href="#">Mouse</a></li>
+                            <li><a href="#">Keyboard</a></li>
+                            <li><a href="#">Audio</a></li>
+                            <li><a href="#">Console</a></li>
+                        </ul>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="/mobile">Mobile</a>
+                        <ul class="sub">
+                            <li><a href="#">Controller</a></li>
+                            <li><a href="#">Headphone</a></li>
+                            <li><a href="#">Buds</a></li>
+                            <li><a href="#">Dac</a></li>
+                        </ul>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#">Lisfstyle</a>
+                        <ul class="sub">
+                            <li><a href="#">Clothes</a></li>
+                            <li><a href="#">Bags</a></li>
+                            <li><a href="#">Customs</a></li>
+                            <li><a href="#">Mac</a></li>
+                        </ul>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#">Service</a>
+                        <ul class="sub">
+                            <li><a href="#">Membership</a></li>
+                            <li><a href="#">Razer Id</a></li>
+                        </ul>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <a href="#">Community</a>
+                        <ul class="sub">
+                            <li><a href="#">Event</a></li>
+                            <li><a href="#">Notice</a></li>
+                            <li><a href="#">Wallpapers</a></li>
+                            <li><a href="#">Stickers</a></li>
+                        </ul>
+                        <div class="line"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

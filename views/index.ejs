@@ -1,0 +1,52 @@
+    <%- include('header',{title:"포폴 메인페이지",cssFiles:["style.css"]},) %>
+    <div class="container">
+        <div class="cont1">
+            <video src="/img/bg_video1.mp4" class="bg" muted loop autoplay>
+            </video>
+            <div class="text">
+                <span class="typing"></span>
+                <p><span class="color">RAZER</span>는 게이머를 위한 <br> 글로벌 라이프 스타일을 선도하는 브랜드입니다.</p>
+            </div>
+            
+        </div>
+        <div class="cont2">
+            <div class="list storeList1">
+                <%- include('mainData') %>
+            </div>
+        </div>
+        <div class="cont3">
+            <div class="title">
+                <h2>Wall Paper</h2>
+                <p>멋진 배경화면을 다운받으세요!</p>
+            </div>
+            <div class="slideWrap">
+                <div class="slide">
+                    <div class="viewWrap">
+                        <div class="view on"></div>
+                        <div class="view"></div>
+                        <div class="view"></div>
+                        <div class="view"></div>
+                    </div>
+                    <div class="btns">
+                        <div class="prevBtn"><i class="fa-solid fa-angle-left"></i></div>
+                        <div class="nextBtn"><i class="fa-solid fa-angle-right"></i></div>
+                    </div>
+                    <div class="bot_btns">
+                        <ul class="bars">
+                            <li class="on"><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <%- include('footer') %>
+    <script src="/js/dropmenu.js"></script>
+    <script src="/js/typing.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/slide.js"></script>
+</body>
+</html>

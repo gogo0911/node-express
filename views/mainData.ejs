@@ -1,0 +1,36 @@
+<% 
+    const lists = [{
+        title:"RAZER NOMMO V2 제품군",
+        subTitle:'강력한 오디오. 포지셔닝 정밀도."'
+    },{
+        title:"RAZER DEATHADDER V3 PRO FAKER EDITION",
+        subTitle:'전문가용'
+    },{
+        title:"RAZER KAIRA HYPERSPEED",
+        subTitle:'어디서나 플레이하고, 어디서나 승리하세요'
+    },{
+        title:"RAZER ORNATA V3 TENKEYLESS",
+        subTitle:'슬림함.클릭키.인체공학적 디자인.'
+    },{
+        title:"RAZER | ROBLOX",
+        subTitle:'무한한 가능성.제약 없는 성능.'
+    },{
+        title:"RAZER BASILISK V3 X HYPERSPEED",
+        subTitle:'고급 커스터마이징.지금 경험하실 수 있습니다.'
+    },{
+        title:"RAZER BLACKSHARK V2 PRO",
+        subTitle:'FOR THE PRO'
+    }]
+%>
+<% for(let i=0; i<lists.length; i++) { %>
+    <div class="lists">
+        <div class="textWrap">
+            <h2><%- lists[i].title %></h2>
+            <h3><%- lists[i].subTitle %></h3>
+            <div class="buy">
+                <a>자세한정보<i class="fa-solid fa-angle-right"></i></a>
+                <a>구매하기<i class="fa-solid fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+<% } %>
