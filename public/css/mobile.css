@@ -204,14 +204,15 @@ body {
   margin-bottom: 50px;
   display: none;
   border-bottom: 1px solid #44d62c;
-  height: 650px;
+  height: 600px;
+  flex-direction: column;
   cursor: pointer;
 }
 .container .cont1 .center .contentsWrap .showBox:hover a {
   text-decoration: underline;
 }
 .container .cont1 .center .contentsWrap .showBox:nth-child(1), .container .cont1 .center .contentsWrap .showBox:nth-child(2), .container .cont1 .center .contentsWrap .showBox:nth-child(3) {
-  display: block;
+  display: flex;
 }
 .container .cont1 .center .contentsWrap .showBox img {
   width: 100%;
@@ -221,7 +222,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 26%;
+  height: 40%;
+  box-sizing: border-box;
 }
 .container .cont1 .center .contentsWrap .showBox .textWrap h3 {
   color: #fff;
