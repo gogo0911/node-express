@@ -9,9 +9,9 @@ const port = 5000
 app.listen(port,()=>{
     console.log("포트폴리오 연결됨");
 })
-let local = ['store','mobile']
+let local = ['store','mobile','login']
 app.get("/",(req,res)=>{
-    res.render("index.ejs")
+    res.render("index")
 })
 
 app.get(`/${local[0]}`,(req,res)=>{
@@ -20,6 +20,10 @@ app.get(`/${local[0]}`,(req,res)=>{
 
 app.get(`/${local[1]}`,(req,res)=>{
     res.render(`${local[1]}`)
+})
+
+app.get(`/${local[2]}`,(req,res)=>{
+    res.render(`${local[2]}`)
 })
 
 

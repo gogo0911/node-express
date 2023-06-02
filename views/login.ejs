@@ -1,0 +1,20 @@
+<%- include('subHeader',{title:"Razer Login",cssFiles:["login.css"]}) %>
+<div class="wrap">
+    <div class="loginWrap">
+        <div class="login">
+            <h2 class="title">RAZER ID 로그인</h2>
+            <form action="/" method="post" class="form">
+                <input type="text" name="userId" placeholder="이메일 주소">
+                <input type="password" name="userPass" placeholder="암호">
+                <a href="#">비밀번호를 잊으셨습니까?</a>
+                <button type="submit">LOG IN</button>
+            </form>
+            <div class="signIn">
+                <p>아직 계정이 없으십니까?</p>
+                <a href="#">Razer ID 만들기<i class="fa-solid fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/header.js"></script>
+<%- include('footer') %>

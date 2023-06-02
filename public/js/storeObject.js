@@ -242,17 +242,4 @@ cont2Slide(next3,prev3,boxWrap3,mid_btn3);
                 
     };         
     
-    hover(storeList1,mid_btn1,boxWrap1);
-    hover(storeList2,mid_btn2,boxWrap2);
-    hover(storeList3,mid_btn3,boxWrap3);
-    function hover(lists,mid_btn,boxWrap){
-        lists.onmouseenter = function(){
-            mid_btn.style.display = "flex"
-        }
-        lists.onmouseleave = function(){
-            mid_btn.style.display = "none"
-        }
-    }
-    
-    
 
