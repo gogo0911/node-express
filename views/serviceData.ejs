@@ -1,0 +1,35 @@
+<% 
+    const lists = [{
+        title:"RAZER 서비스",
+        subTitle:'수백만 명 이상의 사용자와 함께 Razer 서비스를 사용하며 풍부한 게이밍을 경험하세요.',
+        text:"Razer Gold 및 Razer Silver는 모든 배틀필드에서 사용자에게 경쟁 우위를 선사합니다. Gold PIN을 사용하여 지속적으로 확대되는 Gold 웹샵의 게임 목록 중에서 구매하세요. RazerCare로 장비를 보호하고 Razer ID를 사용하여 Razer가 제공하는 모든 최고의 서비스에 액세스하세요."
+    },{
+        title:"RAZER GOLD",
+        subTitle:'Razer Gold는 전 세계 게이머를 위한 통합 가상 포인트로, 42,000개 이상의 게임 및 엔터테인먼트 타이틀에서 사용할 수 있습니다. Razer Gold를 사용하여 게임과 게임 내 콘텐츠를 구매하고 Razer Silver 및 독점 게임 거래로 보상을 받는 등 더 많은 혜택을 누릴 수 있습니다.',
+        text:"온라인 또는 전 세계 560만 터치포인트에서 Razer Gold 계정을 다시 로드하여 시작하세요."
+    },{
+        title:"RAZER SILVER",
+        subTitle:'Razer Silver는 게이머를 위한 유일한 로열티 보상 프로그램입니다.',
+        text:"Razer Gold를 사용하여 게임을 구매하거나 당사 소프트웨어 및 서비스에 참여하면 Razer Silver를 획득할 수 있습니다. Razer Silver를 독점 이벤트에 활용하세요. Razer 하드웨어부터 디지털 보상 및 할인까지, 흥미로운 보상을 교환하는 데 사용할 수도 있습니다."
+    },{
+        title:"GOLD WEBSHOP",
+        subTitle:'Gold 웹샵에서 42,000개 이상의 게임 및 엔터테인먼트 타이틀을 검색하세요.',
+        text:"배틀그라운드 모바일, 모바일 레전드: Bang Bang, 원신 등 인기 타이틀에서 재장전하세요! 전체 타이틀 목록은 Gold 웹샵에서 확인하세요."
+    },{
+        title:"RAZER ID",
+        subTitle:'Razer ID로 경쟁 우위를 확보하고 지원, 전문 지식 및 커뮤니티를 활용하세요. Razer 서비스 및 소프트웨어와 통합되어 사이트에서 최고의 게이머 장비 구매, Razer Silver 교환, Synapse에 개인화된 구성 저장 등 Razer ID로 수많은 도구에 액세스할 수 있습니다.',
+        text:"RAZER ID로 게임을 연동해서 게임스탯을 확인하세요."
+    }]
+%>
+<% for(let i=0; i<lists.length; i++) { %>
+    <div class="lists">
+        <div class="textWrap">
+            <h2><%- lists[i].title %></h2>
+            <p><%- lists[i].subTitle %></p>
+            <p><%- lists[i].text %></p>
+            <div class="buy">
+                <a>자세한정보<i class="fa-solid fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+<% } %>

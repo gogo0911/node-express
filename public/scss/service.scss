@@ -1,0 +1,87 @@
+@import "reset";
+@import "header";
+@import "footer";
+.container{
+    .cont {
+        margin-top: 150px;
+        .list{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            .lists{
+                cursor: pointer;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                height: 700px;
+                margin: 15px 10px 15px;
+                box-sizing: border-box;
+                &:nth-child(1){
+                    height: 400px;
+                    .textWrap{
+                        h2{
+                            color: #44d62c;
+                            font-size: 40px;
+                        }
+                    }
+                }
+                &:nth-child(2){
+                    background-image: url(../img/service/bg_1.jpg);
+                }
+                &:nth-child(3){
+                    background-image: url(../img/service/bg_2.jpg);
+                }
+                &:nth-child(4){
+                    background-image: url(../img/service/bg_3.jpg);
+                }
+                &:nth-child(5){
+                    background-image: url(../img/service/bg_4.jpg);
+                }
+                .textWrap{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h2{
+                        text-align: center;
+                        margin: 40px 0px 20px 0;
+                        color: #fff;
+                        font-weight: normal;
+                        font-size: 35px;
+                    }
+                    p{
+                        width: 50%;
+                        font-size: 18px;
+                        text-align: center;
+                        font-weight: normal;
+                        color: #c1c1c1;
+                        font-weight: 200;
+                        margin-bottom: 30px;
+                        line-height: 30px;
+                        word-break: keep-all;
+                    }
+                }
+                .buy{
+                    display: flex;
+                    justify-content: center;
+                    width: 70%;
+                    a{
+                        color: #44d62c;
+                        margin: 20px 25px;
+                        font-size: 15px;
+                        i{
+                            margin-left: 2px;
+                            color: #44d62c;
+                        }
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+    } 
+}

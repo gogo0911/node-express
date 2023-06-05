@@ -1,0 +1,19 @@
+<%- include('subHeader',{title:"Razer ID",cssFiles:["forgotPass.css"]}) %>
+<div class="wrap">
+    <div class="forgotPassWrap">
+        <div class="forgotPass">
+            <h2 class="title">암호 복구</h2>
+            <p>어느 Razer ID 계정의 접속에 문제가 있습니까?</p>
+            <p class="subTitle">본인 이메일에 더 이상 접속이 되지 않으면 문의해 주십시오. <a href="">Razer 지원팀</a></p>
+            <form action="#" method="post" class="form">
+                <input type="text" name="userId" placeholder="RAZER ID EMAIL OR RECOVERY EMAIL">
+                <div class="btns">
+                    <a href="/login">뒤로</a>
+                    <button type="submit" disabled>제출</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="/js/header.js"></script>
+<%- include('footer') %>
