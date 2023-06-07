@@ -296,16 +296,16 @@ body {
   color: #44d62c;
   font-size: 40px;
 }
-.container .cont .list .lists:nth-child(2) {
+.container .cont .list .lists:nth-child(3) {
   background-image: url(../img/service/bg_1.jpg);
 }
-.container .cont .list .lists:nth-child(3) {
+.container .cont .list .lists:nth-child(5) {
   background-image: url(../img/service/bg_2.jpg);
 }
-.container .cont .list .lists:nth-child(4) {
+.container .cont .list .lists:nth-child(7) {
   background-image: url(../img/service/bg_3.jpg);
 }
-.container .cont .list .lists:nth-child(5) {
+.container .cont .list .lists:nth-child(9) {
   background-image: url(../img/service/bg_4.jpg);
 }
 .container .cont .list .lists .textWrap {
@@ -325,7 +325,7 @@ body {
   font-size: 18px;
   text-align: center;
   font-weight: normal;
-  color: #c1c1c1;
+  color: #999;
   font-weight: 200;
   margin-bottom: 30px;
   line-height: 30px;
@@ -347,4 +347,96 @@ body {
 }
 .container .cont .list .lists .buy a:hover {
   text-decoration: underline;
+}
+.container .cont .list .textWrap {
+  display: none;
+}
+.container .cont .list .buy {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .container .cont {
+    margin-top: 120px;
+  }
+  .container .cont .list .lists {
+    margin: 0;
+  }
+  .container .cont .list .lists:nth-child(1) {
+    height: auto;
+  }
+  .container .cont .list .lists:nth-child(1) .textWrap h2 {
+    font-size: 32px;
+  }
+  .container .cont .list .lists .textWrap h2 {
+    margin: 30px 0px 20px 0;
+    font-size: 28px;
+  }
+  .container .cont .list .lists .textWrap p {
+    width: 70%;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 26px;
+  }
+  .container .cont .list .lists .buy a {
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .container .cont .list .lists {
+    height: 300px;
+  }
+  .container .cont .list .lists:nth-child(7) {
+    background-position: center right;
+    background-image: url(../img/service/640px_bg.jpg);
+  }
+  .container .cont .list .lists .textWrap {
+    display: none;
+  }
+  .container .cont .list .textWrap {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .container .cont .list .textWrap:nth-child(2) h2 {
+    color: #44d62c;
+    font-size: 32px;
+    text-align: center;
+  }
+  .container .cont .list .textWrap:nth-child(2) p {
+    text-align: center;
+  }
+  .container .cont .list .textWrap h2 {
+    text-align: start;
+    margin: 20px 0px 20px 0;
+    color: #fff;
+    font-weight: normal;
+    font-size: 28px;
+  }
+  .container .cont .list .textWrap p {
+    width: 100%;
+    font-size: 18px;
+    font-weight: normal;
+    color: #999;
+    margin-bottom: 30px;
+    line-height: 30px;
+    word-break: keep-all;
+  }
+  .container .cont .list .buy {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+  }
+  .container .cont .list .buy a {
+    color: #44d62c;
+    margin: 20px 25px;
+    font-size: 15px;
+  }
+  .container .cont .list .buy a i {
+    margin-left: 2px;
+    color: #44d62c;
+  }
+  .container .cont .list .buy a:hover {
+    text-decoration: underline;
+  }
 }

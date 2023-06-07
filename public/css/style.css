@@ -578,6 +578,10 @@ body {
     width: 49%;
     height: 50vh;
   }
+  .container .cont2 .list .lists .textWrap h3 {
+    color: #999;
+    font-size: 16px;
+  }
   .container .cont2 .list .lists .buy a {
     font-size: 14px;
     margin: 20px;

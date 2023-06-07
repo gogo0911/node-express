@@ -27,16 +27,16 @@
                         }
                     }
                 }
-                &:nth-child(2){
+                &:nth-child(3){
                     background-image: url(../img/service/bg_1.jpg);
                 }
-                &:nth-child(3){
+                &:nth-child(5){
                     background-image: url(../img/service/bg_2.jpg);
                 }
-                &:nth-child(4){
+                &:nth-child(7){
                     background-image: url(../img/service/bg_3.jpg);
                 }
-                &:nth-child(5){
+                &:nth-child(9){
                     background-image: url(../img/service/bg_4.jpg);
                 }
                 .textWrap{
@@ -55,7 +55,7 @@
                         font-size: 18px;
                         text-align: center;
                         font-weight: normal;
-                        color: #c1c1c1;
+                        color: #999;
                         font-weight: 200;
                         margin-bottom: 30px;
                         line-height: 30px;
@@ -81,7 +81,118 @@
                     
                 }
             }
+            .textWrap{
+                display: none;
+            }
+            .buy{
+                display: none;
+            }
         }
         
     } 
+}
+@media screen and (max-width:1024px) {
+    .container{
+        .cont {
+            margin-top: 120px;
+            .list{
+                .lists{
+                    margin: 0;
+                    &:nth-child(1){
+                        height: auto;
+                        .textWrap{
+                            h2{
+                                font-size: 32px;
+                            }
+                        }
+                    }
+                    .textWrap{
+
+                        h2{
+                            margin: 30px 0px 20px 0;
+                            font-size: 28px;
+                        }
+                        p{
+                            width: 70%;
+                            font-size: 16px;
+                            margin-bottom: 20px;
+                            line-height: 26px;
+                        }
+                    }
+                    .buy{
+                        a{
+                            margin: 10px;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
+@media screen and (max-width:640px) {
+    .container{
+        .cont{
+            .list{
+                .lists{
+                    height: 300px;
+                    &:nth-child(7){
+                        background-position: center right;
+                        background-image: url(../img/service/640px_bg.jpg);
+                    }
+                    .textWrap{
+                        display: none;
+                    }
+                }
+                .textWrap{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 20px;
+                    &:nth-child(2){
+                        h2{
+                            color: #44d62c;
+                            font-size: 32px;
+                            text-align: center;
+                        }
+                        p{
+                            text-align: center;
+                        }
+                    }
+                    h2{
+                        text-align: start;
+                        margin: 20px 0px 20px 0;
+                        color: #fff;
+                        font-weight: normal;
+                        font-size: 28px;
+                    }
+                    p{
+                        width: 100%;
+                        font-size: 18px;
+                        font-weight: normal;
+                        color: #999;
+                        margin-bottom: 30px;
+                        line-height: 30px;
+                        word-break: keep-all;
+                    }
+                }
+                .buy{
+                    display: flex;
+                    justify-content: center;
+                    width: 70%;
+                    a{
+                        color: #44d62c;
+                        margin: 20px 25px;
+                        font-size: 15px;
+                        i{
+                            margin-left: 2px;
+                            color: #44d62c;
+                        }
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
 }
