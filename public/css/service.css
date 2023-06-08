@@ -184,7 +184,7 @@ body {
     position: fixed;
     z-index: 999999;
     top: 0;
-    left: 0;
+    left: -1px;
     width: 0%;
     overflow: hidden;
     height: 100vh;
@@ -425,7 +425,7 @@ body {
   .container .cont .list .buy {
     display: flex;
     justify-content: center;
-    width: 70%;
+    width: 100%;
   }
   .container .cont .list .buy a {
     color: #44d62c;

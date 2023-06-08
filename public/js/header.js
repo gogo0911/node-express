@@ -21,7 +21,7 @@ window.onscroll = function(){
 }
 
 m_btn.addEventListener("click",()=>{
-    m_Wrap.style.width = "50%"
+    m_Wrap.style.width = "60%"
 })
 m_close.addEventListener("click",()=>{
     m_Wrap.style.width = "0%"

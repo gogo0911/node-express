@@ -32,7 +32,7 @@ app.use(express.static('public'));
 app.listen(port,()=>{
     console.log("포트폴리오 연결됨");
 })
-let local = ['store','mobile','login','forgotpass','service']
+let local = ['store','mobile','login','forgotpass','service','join']
 app.get("/",(req,res)=>{
     res.render("index")
 })
@@ -53,6 +53,9 @@ app.get(`/${local[3]}`,(req,res)=>{
 })
 app.get(`/${local[4]}`,(req,res)=>{
     res.render(`${local[4]}`)
+})
+app.get(`/${local[5]}`,(req,res)=>{
+    res.render(`${local[5]}`)
 })
 
 // app.post("/dblogin",(req,res)=>{

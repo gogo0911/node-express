@@ -196,7 +196,7 @@ body {
     position: fixed;
     z-index: 999999;
     top: 0;
-    left: 0;
+    left: -1px;
     width: 0%;
     overflow: hidden;
     height: 100vh;
@@ -417,7 +417,7 @@ body {
   background-color: #111;
   opacity: 1;
   transition: all 0.5s;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .container .list .boxWrap .showBox img {
   width: 100%;
@@ -492,6 +492,9 @@ body {
   .container .store h2 {
     font-size: 34px;
   }
+  .container .store .listWrap {
+    width: 95%;
+  }
   .container .store .listWrap .boxLIst {
     word-break: keep-all;
   }
@@ -519,7 +522,7 @@ body {
     font-size: 14px;
     line-height: 22px;
     height: 180px;
-    padding: 10px;
+    padding: 10px 5px;
   }
   .container .list .boxWrap .showBox .textWrap h3 {
     font-size: 14px;
@@ -578,19 +581,19 @@ body {
     width: 48%;
   }
   .container .list .boxWrap .showBox .textWrap h3 {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px;
   }
   .container .list .boxWrap .showBox .textWrap > div {
     align-items: center;
   }
   .container .list .boxWrap .showBox .textWrap > div p {
-    font-size: 16px;
+    font-size: 14px;
   }
   .container .list .boxWrap .showBox .textWrap > div a {
-    width: 50px;
-    height: 30px;
-    font-size: 15px;
+    width: 40px;
+    height: 20px;
+    font-size: 14px;
   }
   .container .list .mid_btn {
     display: none;

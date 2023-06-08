@@ -196,7 +196,7 @@ body {
     position: fixed;
     z-index: 999999;
     top: 0;
-    left: 0;
+    left: -1px;
     width: 0%;
     overflow: hidden;
     height: 100vh;
@@ -340,7 +340,7 @@ body {
   display: flex;
   justify-content: flex-end;
   font-size: 13px;
-  color: #474747;
+  color: #999;
   margin-bottom: 25px;
 }
 .wrap .loginWrap .login .form button {

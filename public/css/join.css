@@ -284,237 +284,145 @@ body {
     display: none;
   }
 }
-.container .cont1 {
-  margin: 100px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #111;
-}
-.container .cont1 .titleWrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px 0;
-}
-.container .cont1 .titleWrap h2 {
-  color: #44d62c;
-  font-size: 40px;
-  font-weight: normal;
-}
-.container .cont1 .titleWrap p {
-  margin: 20px 0;
-  font-size: 24px;
-  color: #d9d9d9;
-  width: 65%;
-  word-break: keep-all;
-  text-align: center;
-  line-height: 34px;
-}
-.container .cont1 .center {
-  width: 73%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.container .cont1 .center .contentsWrap {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.container .cont1 .center .contentsWrap .showBox {
-  background-color: #000;
-  width: 31%;
-  margin-bottom: 50px;
-  display: none;
-  border-bottom: 1px solid #44d62c;
-  height: 600px;
-  flex-direction: column;
-  cursor: pointer;
-}
-.container .cont1 .center .contentsWrap .showBox:hover a {
-  text-decoration: underline;
-}
-.container .cont1 .center .contentsWrap .showBox:nth-child(1), .container .cont1 .center .contentsWrap .showBox:nth-child(2), .container .cont1 .center .contentsWrap .showBox:nth-child(3) {
-  display: flex;
-}
-.container .cont1 .center .contentsWrap .showBox img {
-  width: 100%;
-}
-.container .cont1 .center .contentsWrap .showBox .textWrap {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 40%;
+.wrap {
+  height: 1000px;
   box-sizing: border-box;
+  overflow: hidden;
 }
-.container .cont1 .center .contentsWrap .showBox .textWrap h3 {
-  color: #fff;
-  font-size: 23px;
-  font-weight: normal;
-}
-.container .cont1 .center .contentsWrap .showBox .textWrap p {
-  margin: 15px 0;
-  line-height: 24px;
-  word-break: keep-all;
-  color: #c1c1c1;
-}
-.container .cont1 .center .contentsWrap .showBox .textWrap a {
-  color: #44d62c;
-}
-.container .cont1 .center .more {
+.wrap .joinWrap {
+  height: 100%;
+  background-image: url(../img/login/log_bg.jpg);
+  background-size: cover;
+  background-position: center 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
-  height: 40px;
-  background-color: #44d62c;
-  color: #fff;
-  border-radius: 5px;
-  transition: all 0.5s;
-  cursor: pointer;
 }
-.container .cont1 .center .more:hover {
-  background-color: #fff;
+.wrap .joinWrap .join {
+  background-color: #000;
+  border: 1px solid #b0b0b0;
+  width: 400px;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.wrap .joinWrap .join .title {
+  font-size: 22px;
+  color: #fff;
+  font-weight: normal;
+}
+.wrap .joinWrap .join p {
+  color: #999;
+  margin-top: 10px;
+}
+.wrap .joinWrap .join .form {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+.wrap .joinWrap .join .form input {
+  outline: none;
+  display: flex;
+  background-color: #000;
+  color: #fff;
+  padding-left: 10px;
+  border: 1px solid #b0b0b0;
+  border-radius: 1px;
+  height: 40px;
+  margin: 10px 0;
+}
+.wrap .joinWrap .join .form a {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 13px;
+  color: #474747;
+  margin-bottom: 25px;
+}
+.wrap .joinWrap .join .form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #44d62c;
+  height: 35px;
+  border-radius: 3px;
+  border: none;
+}
+.wrap .joinWrap .join .form h3 {
+  font-weight: normal;
+  margin-top: 15px;
+  color: #fff;
+}
+.wrap .joinWrap .join .form > p {
+  color: #999;
+  margin: 10px 0;
+  line-height: 25px;
+  font-size: 15px;
+}
+.wrap .joinWrap .join .form > p span {
   color: #44d62c;
 }
-.container .cont2 .list {
+.wrap .joinWrap .join .form .check {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
-.container .cont2 .list .lists {
-  cursor: pointer;
-  width: 100%;
-  height: 700px;
-  background-image: url(../img/mobile/bg1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.wrap .joinWrap .join .form .check #ok {
+  height: auto;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
 }
-.container .cont2 .list .lists .textWrap {
+.wrap .joinWrap .join .form .check label {
+  color: #999;
+}
+.wrap .joinWrap .join .signIn {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.container .cont2 .list .lists .textWrap h2 {
-  margin: 40px 0px 20px 0;
-  font-size: 30px;
-  color: #fff;
-}
-.container .cont2 .list .lists .textWrap h3 {
-  font-weight: normal;
+.wrap .joinWrap .join .signIn p {
   color: #c1c1c1;
+  font-size: 13px;
+  margin-bottom: 20px;
 }
-.container .cont2 .list .lists .buy {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-}
-.container .cont2 .list .lists .buy a {
+.wrap .joinWrap .join .signIn a {
   color: #fff;
-  margin: 20px 30px;
 }
-.container .cont2 .list .lists .buy a i {
-  margin-left: 3px;
+.wrap .joinWrap .join .signIn a i {
   color: #44d62c;
-}
-.container .cont2 .list .lists .buy a:hover {
-  text-decoration: underline;
 }
 
-@media screen and (max-width: 1024px) {
-  .container .cont1 .titleWrap h2 {
-    font-size: 30px;
-  }
-  .container .cont1 .titleWrap p {
-    font-size: 20px;
-  }
-  .container .cont1 .center {
-    width: 95%;
-  }
-  .container .cont1 .center .contentsWrap {
-    flex-direction: column;
-  }
-  .container .cont1 .center .contentsWrap .showBox {
-    flex-direction: row;
-    width: 100%;
-    height: 400px;
-  }
-  .container .cont1 .center .contentsWrap .showBox:nth-child(1), .container .cont1 .center .contentsWrap .showBox:nth-child(2), .container .cont1 .center .contentsWrap .showBox:nth-child(3) {
-    display: flex;
-  }
-  .container .cont1 .center .contentsWrap .showBox img {
-    width: 50%;
-  }
-  .container .cont1 .center .contentsWrap .showBox .textWrap {
-    height: 100%;
-    box-sizing: border-box;
-  }
-  .container .cont1 .center .more {
-    width: 150px;
-    border: none;
-  }
-  .container .cont2 .list .lists {
-    width: 100%;
-    height: 400px;
-    background-image: url(../img/mobile/bg1.jpg);
-  }
-  .container .cont2 .list .lists .textWrap {
-    padding: 0 20px;
-    word-break: keep-all;
-    text-align: center;
-  }
-  .container .cont2 .list .lists .textWrap h2 {
-    font-size: 30px;
-  }
-  .container .cont2 .list .lists .buy {
-    width: 100%;
-  }
+.footer {
+  background-color: #000;
 }
+
 @media screen and (max-width: 640px) {
-  .container .cont1 .titleWrap h2 {
-    font-size: 24px;
-    word-break: keep-all;
-    text-align: center;
+  html, body {
+    height: auto;
   }
-  .container .cont1 .titleWrap p {
-    font-size: 16px;
-    line-height: 26px;
+  .wrap {
+    background-color: #000;
   }
-  .container .cont1 .center .contentsWrap .showBox {
-    height: 200px;
+  .wrap .joinWrap {
+    box-sizing: border-box;
+    background-image: none;
+    background-color: #000;
+    padding: 50px 20px;
   }
-  .container .cont1 .center .contentsWrap .showBox .textWrap h2 {
-    font-size: 16px;
-  }
-  .container .cont1 .center .contentsWrap .showBox .textWrap p {
-    display: none;
-  }
-  .container .cont2 .list .lists {
-    width: 100%;
-    height: 300px;
-    background-image: url(../img/mobile/bg1.jpg);
-  }
-  .container .cont2 .list .lists .textWrap {
-    padding: 0 20px;
-    word-break: keep-all;
-    text-align: center;
-  }
-  .container .cont2 .list .lists .textWrap h2 {
-    font-size: 30px;
-  }
-  .container .cont2 .list .lists .textWrap h3 {
-    display: none;
-  }
-  .container .cont2 .list .lists .buy {
+  .wrap .joinWrap .join {
+    margin-top: 50px;
+    min-height: 520px;
+    border: none;
     width: 100%;
   }
-  .container .cont2 .list .lists .buy > a {
-    font-size: 13px;
-    margin: 0 10px;
+  .wrap .joinWrap .join .form input {
+    background-color: transparent;
+  }
+  .footer .center p {
+    font-size: 14px;
+  }
+  .footer .center p img {
+    width: 50px;
   }
 }
