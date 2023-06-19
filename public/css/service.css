@@ -222,7 +222,6 @@ body {
   .header .center .top_header .m_gnbWrap .m_join > li {
     display: flex;
     justify-content: center;
-    width: 20%;
     margin-left: 20px;
   }
   .header .center .top_header .m_gnbWrap .m_join > li > a {
