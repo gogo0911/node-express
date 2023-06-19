@@ -1,0 +1,91 @@
+<%- include('subHeader',{title:"Razer ID",cssFiles:["account.css"]}) %>
+<div class="wrap">
+    <div class="accountWrap">
+        <div class="accountLeft accountBox">
+            <div class="accountUp account">
+                <h2 class="title">LOG IN</h2>
+                <a class="upadateNameWrap" href="/account/name">
+                    <div class="label">Razer Name</div>
+                    <div class="info"><%-login.userName%></div>
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+                <a class="upadateIdWrap" href="/account/id">
+                    <div class="label">EMAIL</div>
+                    <div class="info"><%-login.userId%></div>
+                    <i class="fa-solid fa-lock"></i>
+                </a>
+                <a class="upadateNameWrap" href="/account/password">
+                    <div class="label">Password</div>
+                    <div class="info">*********</div>
+                    <i class="fa-solid fa-lock"></i>
+                </a>
+                <a class="upadateNameWrap">
+                    <div class="label">Birth</div>
+                    <div class="info"><%-login.userBirth%></div>
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+            </div>
+            <div class="accountDown account">
+                <h2 class="title">IDENTITY</h2>
+                <a class="upadateNameWrap">
+                    <div class="label">Personal Info</div>
+                    <div class="info">Human,undefined</div>
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+                <a class="upadateIdWrap">
+                    <div class="label">Billing Address</div>
+                    <div class="info">Not added</div>
+                    <i class="fa-solid fa-lock"></i>
+                </a>
+            </div>
+            
+        </div>
+        <div class="accountRight accountBox">
+            <div class="accountUp account">
+                <h2 class="title">SECURITY</h2>
+                <a class="upadateNameWrap">
+                    <div class="label">2-STEP AUTHENTICATION</div>
+                    <div class="info">Not added</div>
+                    <i class="fa-solid fa-lock"></i>
+                </a>
+                <a class="upadateIdWrap">
+                    <div class="label">Backup Email</div>
+                    <div class="info">Not added</div>
+                    <i class="fa-solid fa-lock"></i>
+                </a>
+                <a class="upadateNameWrap">
+                    <div class="label">Privacy Center</div>
+                    <div class="info">Understand how your date is used</div>
+                    <i class="fa-solid fa-lock"></i>
+                </a>
+                <a class="upadateNameWrap">
+                    <div class="label">App Authorizations</div>
+                    <div class="info">Control which apps access your data</div>
+                    <i class="fa-solid fa-lock"></i>
+                </a>
+            </div>
+            <div class="accountDown account">
+                <h2 class="title">CONTACT</h2>
+                <a class="upadateNameWrap" href="/account/name">
+                    <div class="label">Email Subscriptions</div>
+                    <div class="info">Choose how you receive notifications</div>
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- <script>
+    const login = document.querySelector("#login");
+    const userId = document.querySelector("#userId");
+    const userPass = document.querySelector("#userPass");
+    const btn = document.querySelector(".btn");
+
+    // 폼 유효성 검사하는 함수
+   
+
+    // 입력 변경 이벤트에 폼 유효성 검사를 실행하는 이벤트 리스너 추가
+</script> -->
+<script src="/js/header.js"></script>
+<%- include('footer') %>

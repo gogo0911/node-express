@@ -1,5 +1,4 @@
-const boxs = document.querySelectorAll(".container > div");
-const topscroll = document.querySelector(".topscroll");
+// const header = document.querySelector(".header");
 const m_btn = document.querySelector(".m_btn");
 const m_Wrap = document.querySelector(".m_gnbWrap");
 const m_close = document.querySelector(".m_close");

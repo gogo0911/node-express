@@ -3,11 +3,19 @@
     <div class="loginWrap">
         <div class="login">
             <h2 class="title">RAZER ID 로그인</h2>
-            <form action="#" method="post" class="form">
-                <input type="text" name="userId" placeholder="이메일 주소">
-                <input type="password" name="userPass" placeholder="암호">
-                <a href="/forgotpass">비밀번호를 잊으셨습니까?</a>
-                <button type="submit" disabled>LOG IN</button>
+            <form action="/logincheck" method="post" class="form" id="login">
+                <div class="form_control">
+                    <input type="text" id="userId" name="userId" placeholder="이메일 주소" value="">
+                    <span class="error_msg"></span>
+                </div>
+                <div class="form_control">
+                    <input type="password" id="userPass" name="userPass" placeholder="암호" value="">
+                    <span class="error_msg"></span>
+                </div>
+                <div class="forgot">
+                    <a href="/forgotpass">비밀번호를 잊으셨습니까?</a>
+                </div>
+                <button class="btn" type="submit" disabled>LOG IN</button>
             </form>
             <div class="signIn">
                 <p>아직 계정이 없으십니까?</p>
@@ -16,5 +24,48 @@
         </div>
     </div>
 </div>
+<script>
+    const login = document.querySelector("#login");
+    const userId = document.querySelector("#userId");
+    const userPass = document.querySelector("#userPass");
+    const btn = document.querySelector(".btn");
+
+    // 폼 유효성 검사하는 함수
+    function checkFormValidity() {
+        const idValue = userId.value;
+        const passValue = userPass.value;
+
+        const checkId = /^[\w]+[\@][a-z]{5,7}[\.][a-z]{2,3}$/;
+        const checkPass = /^[\w\-\!\$\&]{12,16}$/;
+
+        const isValidId = checkId.test(idValue);
+        const isValidPass = checkPass.test(passValue);
+
+        if (isValidId && isValidPass) {
+            if(isValidPass){
+                userPass.parentElement.className= "form_control ok";
+            }
+            btn.disabled = false;
+        } else {
+            if(!isValidPass){
+                userPass.parentElement.className= "form_control no";
+                userPass.parentElement.querySelector(".error_msg").innerText = "12~16자리의 영문,숫자,특수문자(_,!,$,&,-) 만 입력 가능합니다."; 
+            }
+            if(!isValidId){
+                userId.parentElement.className= "form_control no";
+                userId.parentElement.querySelector(".error_msg").innerText = "이메일형식에 맞춰서 입력해주세요 (ex:asdf123@naver.com)"; 
+            }
+            else{
+                userId.parentElement.className= "form_control ok";
+            }
+            
+            btn.disabled = true;
+        }
+    }
+
+    // 입력 변경 이벤트에 폼 유효성 검사를 실행하는 이벤트 리스너 추가
+    userId.addEventListener("input", checkFormValidity);
+    userPass.addEventListener("input", checkFormValidity);
+</script>
 <script src="/js/header.js"></script>
 <%- include('footer') %>

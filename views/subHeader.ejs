@@ -50,8 +50,13 @@
                     <i class="fa-solid fa-xmark"></i>
                 </div>
                 <ul class="m_join">
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/join">Join</a></li>
+                    <% if(login){ %>
+                        <li><a href="/mypage"><%- login.userName %>님</a></li>
+                        <li><a href="/logout">Log Out</a></li>
+                    <% }else { %>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/join">Join</a></li>
+                    <% } %>
                 </ul>
             </div>
             <div class="gnbWrap">
@@ -108,8 +113,13 @@
                 </ul>
             </div>
             <ul class="join">
-                <li><a href="/login">Login</a></li>
-                <li><a href="/join">Join</a></li>
+                <% if(login){ %>
+                    <li><a href="/account"><%- login.userName %>님</a></li>
+                    <li><a href="/logout">Log Out</a></li>
+                <% }else { %>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/join">Join</a></li>
+                <% } %>
             </ul>
         </div>
     </div>
