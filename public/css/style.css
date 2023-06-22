@@ -356,7 +356,7 @@ body {
 }
 .container .cont2 .list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   margin-bottom: 30px;
 }
@@ -367,7 +367,8 @@ body {
   background-size: cover;
   background-position: center;
   height: 700px;
-  margin: 15px 10px 15px;
+  padding: 0px 10px;
+  margin: 5px 2px;
   box-sizing: border-box;
 }
 .container .cont2 .list .lists:nth-child(1) {
@@ -377,22 +378,22 @@ body {
   background-image: url(../img/listbg2.png);
 }
 .container .cont2 .list .lists:nth-child(3) {
-  width: 47.5%;
+  width: 49.5%;
   height: 50vh;
   background-image: url(../img/listbg3.png);
 }
 .container .cont2 .list .lists:nth-child(4) {
-  width: 47.5%;
+  width: 49.5%;
   height: 50vh;
   background-image: url(../img/listbg4.png);
 }
 .container .cont2 .list .lists:nth-child(5) {
-  width: 47.5%;
+  width: 49.5%;
   height: 50vh;
   background-image: url(../img/listbg5.png);
 }
 .container .cont2 .list .lists:nth-child(6) {
-  width: 47.5%;
+  width: 49.5%;
   height: 50vh;
   background-image: url(../img/listbg7.jpg);
 }

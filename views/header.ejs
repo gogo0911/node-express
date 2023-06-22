@@ -40,6 +40,11 @@
                     <li>
                         <a href="#">Community</a>
                     </li>
+                    <% if(login) { %>
+                        <% if(login.userNo === 0){ %>
+                            <li><a href="/store/insert">Product Setting</a></li>
+                        <% } %>
+                    <% } %>
                 </ul>
                 <div class="m_close">
                     <i class="fa-solid fa-xmark"></i>
@@ -57,7 +62,7 @@
             </ul>
             <h1 class="logo">
                 <a href="/">
-                    <img src="img/logo.png">
+                    <img src="/img/logo.png">
                 </a>
             </h1>
             <ul class="join">
@@ -80,7 +85,7 @@
                             <li><a href="#">Mouse</a></li>
                             <li><a href="#">Keyboard</a></li>
                             <li><a href="#">Audio</a></li>
-                            <li><a href="#">Console</a></li>
+                            
                         </ul>
                         <div class="line"></div>
                     </li>
@@ -122,6 +127,14 @@
                         </ul>
                         <div class="line"></div>
                     </li>
+                    <% if(login) { %>
+                        <% if(login.userNo === 0){ %>
+                            <li>
+                                <a href="/store/insert">Product Setting</a>
+                                <div class="line"></div>
+                            </li>
+                        <% } %>
+                    <% } %>
                 </ul>
             </div>
         </div>

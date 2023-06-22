@@ -1,5 +1,6 @@
 const express = require("express");
 const MongoClient = require("mongodb").MongoClient;
+const multer  = require('multer') //파일업로드 기능 multer 사용하기 위한 불러오기
 //데이터베이스의 데이터 입력,출력을 위한 함수명령어 불러들이는 작업
 const app = express();
 const port = 5000;
@@ -37,13 +38,16 @@ MongoClient.connect("mongodb+srv://02skdisk:Aa9755815@cluster0.pbta6ip.mongodb.n
     });
 
 });
+
 let local = ['store','mobile','login','forgotpass','service','join','account']
 app.get("/",(req,res)=>{
     res.render("index",{login:req.user})
-    console.log(req.user);
 })
 app.get(`/${local[0]}`,(req,res)=>{
-    res.render(`${local[0]}`,{login:req.user})
+    db.collection("product").find().sort({num:-1}).toArray((err,result)=>{
+        //게시글 목록 데이터 전부 가지고 와서 목록페이지로 전달
+        res.render("store.ejs",{data:result,login:req.user})
+   })
 })
 
 app.get(`/${local[1]}`,(req,res)=>{
@@ -153,3 +157,88 @@ app.post("/logincheck",passport.authenticate('local', {failureRedirect : '/login
     })
  })
 
+
+
+ //상품등록
+
+ //상품목록 페이지
+app.get("/store",(req,res)=>{
+    db.collection("product").find().sort({num:-1}).toArray((err,result)=>{
+         //게시글 목록 데이터 전부 가지고 와서 목록페이지로 전달
+         res.render("store.ejs",{data:result})
+    })
+ })
+ 
+ //상품등록 페이지
+ app.get("/store/insert",(req,res)=>{
+     res.render("prd_insert.ejs",{login:req.user});
+ })
+ 
+ 
+ //파일 첨부후 서버에 전달 할 때 multer library 설정
+ const storage = multer.diskStorage({
+     destination: function (req, file, cb) {
+       cb(null, 'public/upload') //업로드 폴더 지정
+     },
+     filename: function (req, file, cb) {
+       cb(null, file.originalname = Buffer.from(file.originalname, 'latin1').toString('utf8'))
+       //영어가 아닌 다른 파일명 안깨지고 나오게 처리
+     }
+   })
+   
+ const upload = multer({ storage: storage })
+ //upload는 위의 설정사항을 담은 변수(상수) 
+ 
+ 
+ 
+ //상품들 데이터베이스에 등록처리(파일첨부 배우면서 코드 수정)
+                     // input type='file name-'thumbnail <---이 값을 기입
+ app.post("/dbupload",upload.single("thumbnail"),(req,res)=>{
+     // console.log(req.file); 파일정보들 확인
+     
+     db.collection("count").findOne({name:"상품갯수"},(err,countResult)=>{
+         db.collection("product").insertOne({
+             num:countResult.prdCount,
+             title:req.body.title,
+             price:req.body.price,
+             attachfile:req.file.filename,
+         },(err,result)=>{
+             db.collection("count").updateOne({name:"상품갯수"},{$inc:{prdCount:1}},(err,result)=>{
+                 res.redirect(`/store`)
+                //  /detail/${countResult.prdCount}
+             })
+         })
+     })
+ })
+ 
+ 
+ 
+ //상품 상세화면페이지
+ app.get("/store/detail/:num",(req,res)=>{
+ 
+     db.collection("product").findOne({num:Number(req.params.num)},(err,result)=>{
+         //find로 찾아온 데이터값은 result에 담긴다
+         //상세페이지 보여주기위해서 찾은 데이터값을 함께 전달한다.
+         res.render("prd_detail.ejs",{data:result,login:req.user});
+     })
+ })
+ 
+ 
+ //상품등록 수정화면 페이지 요청
+ app.get("/store/update/:num",(req,res)=>{
+     db.collection("product").findOne({num:Number(req.params.num)},(err,result)=>{
+ 
+         res.render("prd_update.ejs",{data:result});
+     })
+ })
+ 
+ 
+//  상품 데이터베이스 수정
+ app.post("/dbupdate",upload.single("thumbnail"),(req,res)=>{
+     // 첨부파일 첨부하지 않았을 때 경우는 아직 구현 안함
+     db.collection("product").updateOne({num:Number(req.body.num)},{$set:{title:req.body.title,author:req.body.author,attachfile:req.file.filename}},(err,result)=>{
+         res.redirect(`/store/detail/${req.body.num}`) 
+     })
+ })
+ 
+ 

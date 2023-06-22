@@ -21,7 +21,7 @@
         <div class="top_header">
             <h1 class="logo">
                 <a href="/">
-                    <img src="img/logo.png">
+                    <img src="/img/logo.png">
                 </a>
             </h1>
             <div class="m_btn">
@@ -45,6 +45,11 @@
                     <li>
                         <a href="#">Community</a>
                     </li>
+                    <% if(login) { %>
+                        <% if(login.userNo === 0){ %>
+                            <li><a href="/store/insert">Product Setting</a></li>
+                        <% } %>
+                    <% } %>
                 </ul>
                 <div class="m_close">
                     <i class="fa-solid fa-xmark"></i>
@@ -63,27 +68,27 @@
                 <div class="gnbBg"></div>
                 <ul class="gnb">
                     <li>
-                        <a href="/store">Store</a>
+                        <a>Store</a>
                         <ul class="sub">
-                            <li><a href="#">Mouse</a></li>
-                            <li><a href="#">Keyboard</a></li>
-                            <li><a href="#">Audio</a></li>
-                            <li><a href="#">Console</a></li>
+                            <li><a href="/store">Mouse</a></li>
+                            <li><a href="/store">Keyboard</a></li>
+                            <li><a href="/store">Audio</a></li>
+                            
                         </ul>
                         <div class="line"></div>
                     </li>
                     <li>
-                        <a href="/mobile">Mobile</a>
+                        <a>Mobile</a>
                         <ul class="sub">
-                            <li><a href="#">Controller</a></li>
-                            <li><a href="#">Headphone</a></li>
-                            <li><a href="#">Buds</a></li>
-                            <li><a href="#">Dac</a></li>
+                            <li><a href="/mobile">Controller</a></li>
+                            <li><a href="/mobile">Headphone</a></li>
+                            <li><a href="/mobile">Buds</a></li>
+                            <li><a href="/mobile">Dac</a></li>
                         </ul>
                         <div class="line"></div>
                     </li>
                     <li>
-                        <a href="#">Lifestyle</a>
+                        <a>Lifestyle</a>
                         <ul class="sub">
                             <li><a href="#">Clothes</a></li>
                             <li><a href="#">Bags</a></li>
@@ -93,10 +98,10 @@
                         <div class="line"></div>
                     </li>
                     <li>
-                        <a href="/service">Service</a>
+                        <a>Service</a>
                         <ul class="sub">
-                            <li><a href="#">Membership</a></li>
-                            <li><a href="#">Razer Id</a></li>
+                            <li><a href="/service">Membership</a></li>
+                            <li><a href="/service">Razer Id</a></li>
                         </ul>
                         <div class="line"></div>
                     </li>
@@ -110,6 +115,14 @@
                         </ul>
                         <div class="line"></div>
                     </li>
+                    <% if(login) { %>
+                        <% if(login.userNo === 0){ %>
+                            <li>
+                                <a href="/store/insert">Product Setting</a>
+                                <div class="line"></div>
+                            </li>
+                        <% } %>
+                    <% } %>
                 </ul>
             </div>
             <ul class="join">

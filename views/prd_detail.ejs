@@ -1,0 +1,69 @@
+<%- include('subHeader',{title:"RAZER KOREA/STORE",cssFiles:["prdDetail.css"]}) %>
+    <div class="cont1">
+        <div class="titleWrap">
+            <h2 class="title"><%- data.title %></h2>
+            <a href="/store">Back</a>
+        </div>
+        <div class="center">
+            <div class="prdImg">
+                <img src="/upload/<%- data.attachfile %>">
+            </div>
+            <div class="detail">
+                <h3 class="subTitle"><%- data.title %></h3>
+                <p class="price"><%- data.price %></p>
+                <div class="prdCount">
+                    <button class="minus">-</button>
+                    <span class="count">1</span>
+                    <button class="plus">+</button>
+                    <div class="total">Total Price : <%- data.price %></div>
+                    <a href="#">구입</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('footer') %>
+    <script src="/js/dropmenu.js"></script>
+    <script src="/js/header.js"></script>
+    <script>
+        let dataFromServer = <%- JSON.stringify(data) %>;
+        console.log(dataFromServer.price);
+        let slicePrice = parseInt(dataFromServer.price.replace(/,/g,""));
+        console.log(slicePrice);
+        // 구매가능한 최대 수량은 10개 , 최소 수량은 1개
+        const plus = document.querySelector(".plus");
+        const minus = document.querySelector(".minus");        
+        const count = document.querySelector(".count");        
+        const total = document.querySelector(".total");
+        let countNumber = 1;
+        let totalprice = slicePrice * countNumber;
+
+        // 증가버튼 클릭시 1씩 증가 / count쪽에 숫자값 출력 / 총상품 금액 출력
+        plus.onclick = function(){
+            
+            if(countNumber === 10) {
+                count.innerText = 10;
+                alert("최대 구매 가능한 수량은 10개 입니다.");
+            }
+            else {
+                countNumber = countNumber + 1;
+                count.innerText = countNumber;
+                totalprice = slicePrice * countNumber;
+                total.innerText = "Total Price : " + totalprice.toLocaleString('en-US') + '원';
+            }
+            }
+        minus.onclick = function(){
+        
+            if(countNumber === 1) {
+                count.innerText = 1;
+                alert("최소 구매 수량은 1개 입니다.");
+            }
+            else {
+                countNumber = countNumber - 1;
+                count.innerText = countNumber;
+                totalprice = slicePrice * countNumber;
+                total.innerText = "Total Price : " +  totalprice.toLocaleString('en-US') + '원';
+            }
+        }   
+    </script>
+</body>
+</html>
