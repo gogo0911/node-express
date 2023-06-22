@@ -10,7 +10,7 @@
                     <span class="error_msg"></span>
                 </div>
                 <div class="form_control">
-                    <input type="text" id="userBirth" name="userBirth" placeholder="생년월일 ex]2023-01-01"  value="">
+                    <input type="text" id="userBirth" name="userBirth" placeholder="생년월일 8자리 ex]20230101"  value="">
                     <span class="error_msg"></span>
                 </div>
                 <div class="form_control">
@@ -81,11 +81,11 @@ join.addEventListener('submit',function(event){
     // 이름 체크 
     const checkName = /^[가-힣]{2,4}$/ //문자열을 체크하기 위한 정규표현식
     // 영문대소문자,숫자 _ ,!$&- 12,16
-    const checkPass = /^[\w\-\!\$\&]{12,16}$/;
+    const checkPass = /^[\w\-\!\$\&]{8,16}$/;
     // 이메일 체크 khp2337@gmail.com
     const checkId = /^[\w]+[\@][a-z]{5,7}[\.][a-z]{2,3}$/;
     // 생년월일 체크
-    const checkBirth = /^(19[\d]{2}|20[\d]{2})[\-](0[1-9]|1[0-2])[\-](0[1-9]|[1-2][0-9]|3[0-1])$/;
+    const checkBirth = /^(19[\d]{2}|20[\d]{2})(0[1-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$/;
     
     const isValidId = checkId.test(idValue)
     const isValidPass = checkPass.test(PassValue)
