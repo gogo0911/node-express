@@ -8,9 +8,7 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            margin-bottom: 30px;
             .lists{
-                cursor: pointer;
                 width: 100%;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -134,7 +132,7 @@
         .cont{
             .list{
                 .lists{
-                    height: 300px;
+                    height: 500px;
                     &:nth-child(7){
                         background-position: center right;
                         background-image: url(../img/service/640px_bg.jpg);

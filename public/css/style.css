@@ -178,6 +178,7 @@ body {
     left: 0;
     font-size: 40px;
     color: #44d62c;
+    cursor: pointer;
   }
   .header .center .top_header .m_gnbWrap {
     display: block;
@@ -421,16 +422,16 @@ body {
   display: flex;
   justify-content: center;
 }
-.container .cont2 .list .lists .buy a {
+.container .cont2 .list .lists .buy p {
   color: #fff;
   margin: 20px 25px;
   font-size: 15px;
 }
-.container .cont2 .list .lists .buy a i {
+.container .cont2 .list .lists .buy p i {
   margin-left: 2px;
   color: #44d62c;
 }
-.container .cont2 .list .lists .buy a:hover {
+.container .cont2 .list .lists .buy p:hover {
   text-decoration: underline;
 }
 .container .cont3 {

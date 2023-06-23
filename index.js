@@ -202,6 +202,7 @@ app.get("/store",(req,res)=>{
              title:req.body.title,
              price:req.body.price,
              attachfile:req.file.filename,
+             text:req.body.text
          },(err,result)=>{
              db.collection("count").updateOne({name:"상품갯수"},{$inc:{prdCount:1}},(err,result)=>{
                  res.redirect(`/store`)

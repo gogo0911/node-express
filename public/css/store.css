@@ -184,6 +184,7 @@ body {
     width: 100%;
   }
   .header .center .top_header .m_btn {
+    cursor: pointer;
     display: block;
     position: absolute;
     top: 50%;
@@ -448,7 +449,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.container .list .boxWrap .showBox .textWrap > div a {
+.container .list .boxWrap .showBox .textWrap > div .buy {
   display: flex;
   justify-content: center;
   align-items: center;

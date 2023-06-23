@@ -184,6 +184,7 @@ body {
     width: 100%;
   }
   .header .center .top_header .m_btn {
+    cursor: pointer;
     display: block;
     position: absolute;
     top: 50%;
@@ -338,6 +339,7 @@ body {
   background-size: cover;
 }
 .cont1 .center .prdImg img {
+  width: 500px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -359,7 +361,19 @@ body {
 }
 .cont1 .center .detail .price {
   color: #fff;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
+}
+.cont1 .center .detail textarea {
+  white-space: pre-wrap;
+  resize: none;
+  width: 100%;
+  height: 150px;
+  line-height: 25px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #c1c1c1;
+  font-family: "razerf5", "Noto Sans KR";
 }
 .cont1 .center .detail .prdCount {
   color: #fff;

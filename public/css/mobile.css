@@ -184,6 +184,7 @@ body {
     width: 100%;
   }
   .header .center .top_header .m_btn {
+    cursor: pointer;
     display: block;
     position: absolute;
     top: 50%;
@@ -350,19 +351,21 @@ body {
   box-sizing: border-box;
   padding-bottom: 30px;
 }
-.container .cont1 .center .contentsWrap .showBox .textWrap h3 {
+.container .cont1 .center .contentsWrap .showBox .textWrap h2 {
   color: #fff;
   font-size: 23px;
   font-weight: normal;
 }
-.container .cont1 .center .contentsWrap .showBox .textWrap p {
+.container .cont1 .center .contentsWrap .showBox .textWrap h3 {
+  font-weight: normal;
   margin: 15px 0;
   line-height: 24px;
   word-break: keep-all;
   color: #c1c1c1;
   padding: 20px 0;
+  font-size: 16px;
 }
-.container .cont1 .center .contentsWrap .showBox .textWrap a {
+.container .cont1 .center .contentsWrap .showBox .textWrap p {
   position: absolute;
   bottom: 20px;
   color: #44d62c;
@@ -419,7 +422,7 @@ body {
   width: 50%;
 }
 .container .cont2 .list .lists .buy a {
-  color: #fff;
+  color: #44d62c;
   margin: 20px 30px;
 }
 .container .cont2 .list .lists .buy a i {
@@ -490,9 +493,6 @@ body {
   }
   .container .cont1 .center .contentsWrap .showBox .textWrap h2 {
     font-size: 16px;
-  }
-  .container .cont1 .center .contentsWrap .showBox .textWrap p {
-    display: none;
   }
   .container .cont2 .list .lists {
     width: 100%;

@@ -119,7 +119,7 @@ join.addEventListener('submit',function(event){
     }
     else{
         userPass.parentElement.className= "form_control no";
-        userPass.parentElement.querySelector(".form_control.no .error_msg").innerText = "12~16자리의 영문,숫자,특수문자(_,!,$,&,-) 만 입력 가능합니다.";
+        userPass.parentElement.querySelector(".form_control.no .error_msg").innerText = "8~16자리의 영문,숫자,특수문자(_,!,$,&,-) 만 입력 가능합니다.";
         validCheck.validPass = false;
     }
     // 생년월일 체크

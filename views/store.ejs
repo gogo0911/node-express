@@ -44,15 +44,14 @@
     if (i % 30 === 0) {
         if (showBoxCount > 0) {
 %>
-    </div> <!-- Close the previous boxWrap div -->
-    </div> <!-- Close the previous list div -->
+    </div> <!-- boxWrap div 닫는 태그 -->
+    </div> <!-- list div 닫는 태그  -->
 <% }
 %>
     <div class="listWrap">
 <% }
     if (i % 10 === 0) {
         if (showBoxCount > 0) {
-            console.log(i % 3);
 %>
     
    
@@ -63,15 +62,14 @@
 <%  if (i % 3 === 0) {
             title = "RAZER 전용";
             text = "공식 온라인 스토어에서만 구매할 수 있는 고유한 제품을 알아보세요";
-        } else if (i % 3 === 1) {
-            title = "최고의 최신 게이밍 장비";
-            text = "최신 제품을 확인하여 셋업을 최신 상태로 업그레이드하세요";
-        } else {
-            title = "RAZER 마지막 기회";
-            text ="엄선된 클래식 장비 – 완전한 보증이 포함된 특별 가격";
-        }
+    } else if (i % 3 === 1) {
+        title = "최고의 최신 게이밍 장비";
+        text = "최신 제품을 확인하여 셋업을 최신 상태로 업그레이드하세요";
+    } else {
+        title = "RAZER 마지막 기회";
+        text ="엄선된 클래식 장비 – 완전한 보증이 포함된 특별 가격";
+    }
 
-    // Check if the title has changed
     if (previousTitle !== title) {
         previousTitle = title;
 %>
@@ -88,16 +86,16 @@
         </div>   
         <div class="boxWrap boxWrap<%-count%>">
 <% }%>
-        <div class="showBox">
+        <a  href="/store/detail/<%- data[i].num %>" class="showBox">
             <img src="/upload/<%- item.attachfile %>">
             <div class="textWrap">
                 <h3><%- item.title %></h3>
                 <div>
                     <p><%- item.price %></p>
-                    <a href="/store/detail/<%- data[i].num %>">구입</a>
+                    <p class="buy">구입</p>
                 </div>
             </div>
-        </div>
+        </a>
         <% if (i === data.length - 1) {%>
             
         </div>

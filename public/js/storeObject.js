@@ -1,19 +1,25 @@
-
 const storeList1 = document.querySelector(".storeList1")
 const storeList2 = document.querySelector(".storeList2")
 const storeList3 = document.querySelector(".storeList3")
+// for(let i=0; i< countUp.length; i++){
+
+// }
 const boxWrap1 = document.querySelector(".boxWrap1");
 const boxWrap2 = document.querySelector(".boxWrap2");
 const boxWrap3 = document.querySelector(".boxWrap3");
+const boxWrap4 = document.querySelector(".boxWrap4");
 const mid_btn1 = document.querySelector(".mid_btn1");
 const mid_btn2 = document.querySelector(".mid_btn2");
 const mid_btn3 = document.querySelector(".mid_btn3");
+const mid_btn4 = document.querySelector(".mid_btn4");
 const prev1 = document.querySelector(".prev1");
 const prev2 = document.querySelector(".prev2");
 const prev3 = document.querySelector(".prev3");
+const prev4 = document.querySelector(".prev4");
 const next1 = document.querySelector(".next1");
 const next2 = document.querySelector(".next2");
 const next3 = document.querySelector(".next3");
+const next4 = document.querySelector(".next4");
 // let boxList1 = [
 //     {
 //         imgSrc:"img/store/boximg1.png",
@@ -192,24 +198,19 @@ const next3 = document.querySelector(".next3");
 cont2Slide(next1,prev1,boxWrap1,mid_btn1);
 cont2Slide(next2,prev2,boxWrap2,mid_btn2);
 cont2Slide(next3,prev3,boxWrap3,mid_btn3);
+cont2Slide(next4,prev4,boxWrap4,mid_btn4);
 
     function cont2Slide(next,prev,boxWrap,mid_btn){
         let count = 0;
         next.onclick = ()=>{
             if( count === 4){
                 next.style.opacity = "0"
-                boxWrap.style.transform = `translateX(${count * -15 +"%"})`
-            }
-            else if(count >= 1){
-                
-                count +=1;
-                boxWrap.style.transform = `translateX(${count * -15 +"%"})`
-                
             }
             else{
                 prev.style.opacity = "1"
-                count +=1;
-                boxWrap.style.transform =`translateX(-15%)`
+                count++;
+                console.log(count === 4);
+                boxWrap.style.transform = `translateX(${count * -15 +"%"})`
             }
             
         }
@@ -220,7 +221,7 @@ cont2Slide(next3,prev3,boxWrap3,mid_btn3);
             }
             else{
                 next.style.opacity = "1"
-                count -=1;
+                count--;
                 boxWrap.style.transform = `translateX(${count * -15 +"%"})`
             }
             
@@ -238,8 +239,6 @@ cont2Slide(next3,prev3,boxWrap3,mid_btn3);
                 mid_btn.style.display = 'flex';
             }
         })
-        
-                
     };         
     
 

@@ -178,6 +178,7 @@ body {
     left: 0;
     font-size: 40px;
     color: #44d62c;
+    cursor: pointer;
   }
   .header .center .top_header .m_gnbWrap {
     display: block;
@@ -276,10 +277,8 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 30px;
 }
 .container .cont .list .lists {
-  cursor: pointer;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -383,7 +382,7 @@ body {
 }
 @media screen and (max-width: 640px) {
   .container .cont .list .lists {
-    height: 300px;
+    height: 500px;
   }
   .container .cont .list .lists:nth-child(7) {
     background-position: center right;
