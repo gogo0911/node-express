@@ -2,7 +2,15 @@
     <div class="cont1">
         <div class="titleWrap">
             <h2 class="title"><%- data.title %></h2>
-            <a href="/store">Back</a>
+            <div class="linkWrap">
+                <% if(login) { %>
+                    <% if(login.userNo === 0){ %>
+                        <a href="/store/update/<%- data.num %>">수정</a>
+                        <a href="/dbdelete/<%- data.num %>">삭제</a>
+                    <% } %>
+                <% } %>
+                <a href="/store">Back</a>
+            </div>
         </div>
         <div class="center">
             <div class="prdImg">
@@ -17,7 +25,7 @@
                     <span class="count">1</span>
                     <button class="plus">+</button>
                     <div class="total">Total Price : <%- data.price %></div>
-                    <a href="#">구입</a>
+                    <a class="buy" href="#">구입</a>
                 </div>
             </div>
         </div>
@@ -26,8 +34,10 @@
     <script src="/js/dropmenu.js"></script>
     <script src="/js/header.js"></script>
     <script>
-        let dataFromServer = <%- JSON.stringify(data) %>;
+        let dataFromServer = <%- JSON.stringify(data) %>
+        let dataFromServer2 = <%- JSON.stringify(login) %>
         console.log(dataFromServer.price);
+        console.log(dataFromServer2);
         let slicePrice = parseInt(dataFromServer.price.replace(/,/g,""));
         console.log(slicePrice);
         // 구매가능한 최대 수량은 10개 , 최소 수량은 1개
@@ -35,6 +45,18 @@
         const minus = document.querySelector(".minus");        
         const count = document.querySelector(".count");        
         const total = document.querySelector(".total");
+        const buy = document.querySelector(".buy");
+
+        buy.addEventListener('click',()=>{
+            if(dataFromServer2){
+                alert('구입완료')
+            }
+            else{
+                alert('로그인 후 구매가능합니다')
+                location.href = '/login'
+            }
+        })
+
         let countNumber = 1;
         let totalprice = slicePrice * countNumber;
 

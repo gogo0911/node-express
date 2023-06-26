@@ -1,23 +1,18 @@
 @import "reset";
 @import "subHeader";
 @import "footer";
-html{width: 100%; height: 100%;}
-body{width: 100%; height: 100%; background-image: url(../img/login/log_bg.jpg);
-    background-size: cover;
-    background-position: center 100%;}
 .wrap{
     box-sizing: border-box;
-    height: 100%;
     overflow: hidden;
-    
-    background-color: #000000a8;
+    background-image: url(../img/login/log_bg.jpg);
+    background-size: cover;
+    background-position: center 100%;
     .accountWrap{
-        margin: 100px auto;
+        margin: 80px auto 50px;
         max-width: 1024px;
         height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
         .accountBox{
             display: flex;
             flex-direction: column;
@@ -64,18 +59,13 @@ body{width: 100%; height: 100%; background-image: url(../img/login/log_bg.jpg);
         }   
     }
 }
-.footer{
-    background-color: #00000063;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
 @media screen and (max-width:1024px) {
     .wrap{
+        background-color: #000;
         height: auto;
         .accountWrap{
             flex-direction: column;
+            background-image: none;
         }
     }
 }
@@ -84,7 +74,7 @@ body{width: 100%; height: 100%; background-image: url(../img/login/log_bg.jpg);
         background-color: #000;
         .accountWrap{
             box-sizing: border-box;
-            background-image: none;
+            
             background-color: #000;
             padding: 0px 0px;
             .accountBox{

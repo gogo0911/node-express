@@ -37,17 +37,14 @@
                         <a href="/mobile">Mobile</a>
                     </li>
                     <li>
-                        <a href="/store">Lifestyle</a>
-                    </li>
-                    <li>
                         <a href="/service">Service</a>
                     </li>
                     <li>
-                        <a href="#">Community</a>
+                        <a href="/community">Community</a>
                     </li>
                     <% if(login) { %>
                         <% if(login.userNo === 0){ %>
-                            <li><a href="/store/insert">Product Setting</a></li>
+                            <li><a href="/store/insert">Setting</a></li>
                         <% } %>
                     <% } %>
                 </ul>
@@ -88,37 +85,29 @@
                         <div class="line"></div>
                     </li>
                     <li>
-                        <a>Lifestyle</a>
-                        <ul class="sub">
-                            <li><a href="#">Clothes</a></li>
-                            <li><a href="#">Bags</a></li>
-                            <li><a href="#">Customs</a></li>
-                            <li><a href="#">Mac</a></li>
-                        </ul>
-                        <div class="line"></div>
-                    </li>
-                    <li>
                         <a>Service</a>
                         <ul class="sub">
-                            <li><a href="/service">Membership</a></li>
+                            <li><a href="/service">Gold</a></li>
+                            <li><a href="/service">Silver</a></li>
+                            <li><a href="/service">Webshop</a></li>
                             <li><a href="/service">Razer Id</a></li>
                         </ul>
                         <div class="line"></div>
                     </li>
                     <li>
-                        <a href="#">Community</a>
+                        <a>Community</a>
                         <ul class="sub">
-                            <li><a href="#">Event</a></li>
-                            <li><a href="#">Notice</a></li>
-                            <li><a href="#">Wallpapers</a></li>
-                            <li><a href="#">Stickers</a></li>
+                            <li><a href="/community">Event</a></li>
+                            <li><a href="/community">Notice</a></li>
+                            <li><a href="/community">Wallpapers</a></li>
+                            <li><a href="/community">Stickers</a></li>
                         </ul>
                         <div class="line"></div>
                     </li>
                     <% if(login) { %>
                         <% if(login.userNo === 0){ %>
                             <li>
-                                <a href="/store/insert">Product Setting</a>
+                                <a href="/store/insert">Setting</a>
                                 <div class="line"></div>
                             </li>
                         <% } %>

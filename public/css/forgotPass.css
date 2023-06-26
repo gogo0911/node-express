@@ -47,7 +47,7 @@ body {
   background-color: #111;
 }
 .header .center {
-  width: 1200px;
+  width: 80%;
 }
 .header .center .top_header {
   display: flex;
@@ -56,7 +56,7 @@ body {
 .header .center .top_header .logo {
   margin: 5px 0;
   background-color: transparent;
-  margin-right: 160px;
+  margin-right: 10%;
   width: 130px;
 }
 .header .center .top_header .logo img {
@@ -254,7 +254,7 @@ body {
   background-color: #000;
 }
 .footer .center {
-  width: 1200px;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;

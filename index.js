@@ -39,7 +39,7 @@ MongoClient.connect("mongodb+srv://02skdisk:Aa9755815@cluster0.pbta6ip.mongodb.n
 
 });
 
-let local = ['store','mobile','login','forgotpass','service','join','account']
+let local = ['store','mobile','login','forgotpass','service','join','account','community']
 app.get("/",(req,res)=>{
     res.render("index",{login:req.user})
 })
@@ -68,6 +68,9 @@ app.get(`/${local[5]}`,(req,res)=>{
 })
 app.get(`/${local[6]}`,(req,res)=>{
     res.render(`${local[6]}`,{login:req.user})
+})
+app.get(`/${local[7]}`,(req,res)=>{
+    res.render(`${local[7]}`,{login:req.user})
 })
 
 
@@ -191,8 +194,7 @@ app.get("/store",(req,res)=>{
  
  
  
- //상품들 데이터베이스에 등록처리(파일첨부 배우면서 코드 수정)
-                     // input type='file name-'thumbnail <---이 값을 기입
+ //상품들 데이터베이스에 등록처리
  app.post("/dbupload",upload.single("thumbnail"),(req,res)=>{
      // console.log(req.file); 파일정보들 확인
      
@@ -229,7 +231,7 @@ app.get("/store",(req,res)=>{
  app.get("/store/update/:num",(req,res)=>{
      db.collection("product").findOne({num:Number(req.params.num)},(err,result)=>{
  
-         res.render("prd_update.ejs",{data:result});
+         res.render("prd_update.ejs",{data:result,login:req.user});
      })
  })
  
@@ -237,9 +239,15 @@ app.get("/store",(req,res)=>{
 //  상품 데이터베이스 수정
  app.post("/dbupdate",upload.single("thumbnail"),(req,res)=>{
      // 첨부파일 첨부하지 않았을 때 경우는 아직 구현 안함
-     db.collection("product").updateOne({num:Number(req.body.num)},{$set:{title:req.body.title,author:req.body.author,attachfile:req.file.filename}},(err,result)=>{
-         res.redirect(`/store/detail/${req.body.num}`) 
+     db.collection("product").updateOne({num:Number(req.body.num)},{$set:{title:req.body.title,text:req.body.text,price:req.body.price,attachfile:req.file.filename}},(err,result)=>{
+        res.redirect(`/store/detail/${req.body.num}`)
      })
  })
+ app.get("/dbdelete/:num",(req,res)=>{
+    db.collection("product").deleteOne({num:Number(req.params.num)},(err,result)=>{
+        //게시글 삭제후 게시글 목록페이지로 요청
+        res.redirect("/store")
+    })
+})
  
  

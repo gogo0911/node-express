@@ -1,0 +1,328 @@
+@import "reset";
+@import "subHeader";
+@import "footer";
+.wrap{
+    overflow: hidden;
+    >video{
+        margin-top: 70px;
+        width: 100%;
+        object-fit: fill;
+    }
+    .winner{
+        background-color: #44d62c;
+        text-align: center;
+        padding: 30px 0;
+        .title{
+            font-size: 50px;
+            margin-bottom: 40px;
+        }
+        p{
+            font-size: 18px;
+            margin: 20px 0;
+            word-break: keep-all;
+            line-height: 25px;
+            span{
+                font-weight: bold;
+            }
+        }
+    }
+    .winner2{
+        text-align: center;
+        .title{
+            color: #44d62c;
+            font-size: 40px;
+            padding: 30px 0;
+        }
+        p{
+            margin: 0 auto;
+            color: #999;
+            width: 50%;
+            line-height: 30px;
+            margin-bottom: 40px;
+        }
+        >ul{
+            display: flex;
+            justify-content: space-between;
+            >li{
+                width: 24%;
+                >a{
+                    img{
+                        width: 100%;
+                        background-color: #44d62c;
+                        margin-bottom: 20px;
+                    }
+                }
+                a{
+                    color: #fff;
+                    font-size: 20px;
+                }
+            }
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: #44d62c;
+            margin: 40px auto;
+            color: #000;
+    
+        }
+    }
+    .winner3{
+        text-align: center;
+        .title{
+            color: #44d62c;
+            font-size: 40px;
+            padding: 30px 0;
+        }
+        p{
+            margin: 0 auto;
+            color: #999;
+            width: 50%;
+            line-height: 30px;
+            margin-bottom: 40px;
+        }
+        ul{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 2rem;
+            margin-bottom: 50px;
+            >li{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .winner4{
+        text-align: center;
+        margin-bottom: 200px;
+        .title{
+            color: #44d62c;
+            font-size: 40px;
+            padding: 30px 0;
+        }
+        .tabMenu{
+            margin: 0 auto;
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 30px;
+            >li{
+                cursor: pointer;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 20%;
+                border: 1px solid #fff;
+                padding: 10px 0;
+                &:nth-child(1){
+                    color: #000;
+                    background-color: #44d62c;
+                }
+            }
+        }
+        .views{
+            height: 60vh;
+            position: relative;
+            width: 100%;
+            .view{
+                display: flex;
+                align-items: center;
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: all 0.5s;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+                &:nth-child(1){background-image: url(/img/winner4_tab1.jpg); opacity: 1; z-index: 2;}
+                &:nth-child(2){background-image: url(/img/winner4_tab2.jpg);}
+                &:nth-child(3){background-image: url(/img/winner4_tab3.jpg);}
+                &:nth-child(4){background-image: url(/img/winner4_tab4.jpg);}
+            }
+        }
+        .texts{
+            position: relative; 
+            width: 100%;
+            height: 60vh;
+            .textWrap{
+                position: absolute;
+                align-items: center;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                width: 100%;
+                transition: all 0.5s;
+                h2{
+                    color: #fff;
+                    font-size: 50px;
+                    transition: all .5s;
+                    margin: 30px;
+                    >span{
+                        color: #44d62c;
+                    }
+                }
+                h3{
+                    color: #fff;
+                    font-size: 20px;
+                    transition: 0.5s;
+                }
+                p{
+                    margin: 30px auto;
+                    color: #999;
+                    width: 60%;
+                    line-height: 25px;
+                }
+                .link{
+                    color: #fff;
+                    font-size: 20px;
+                    >a{
+                        color: #44d62c;
+                    }
+                }
+                >a{
+                    img{
+                        width: 300px;
+                        
+                        border: 1px solid #fff;
+                    }
+                }
+                &:nth-child(1){opacity: 1; z-index: 2;}
+                
+            }
+        }
+    }
+}
+@media screen and (max-width:1024px) {
+    .wrap{
+        .winner2{
+            p{
+                width: 80%;
+            }
+            >ul{
+                display: flex;
+                flex-wrap: wrap;
+                >li{
+                    width: 49%;
+                    >a{
+                        img{
+                            margin: 20px 0;
+                        }
+                    }
+                }
+            }
+        }
+        .winner3{
+            p{
+                width: 80%;
+            }
+            ul{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 2rem;
+                margin-bottom: 50px;
+                >li{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .winner4{
+            margin-bottom: 230px;
+            .tabMenu{
+                width: 100%;
+                flex-direction: column;
+                >li{
+                    margin: 10px 0;
+                    width: 100%;
+                }
+            }
+            .views{
+                height: 40vh;
+            }
+            .texts{
+                height: 50vh;
+                .textWrap{
+                    p{
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:640px) {
+    .wrap{
+        .title{
+            word-break: keep-all;
+        }
+        .winner2{
+            p{
+                width: 80%;
+            }
+            >ul{
+                display: flex;
+                flex-wrap: wrap;
+                >li{
+                    width: 49%;
+                    >a{
+                        img{
+                            margin: 20px 0;
+                        }
+                    }
+                }
+            }
+        }
+        .winner3{
+            
+            p{
+                width: 80%;
+            }
+            ul{
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+                gap: 2rem;
+                margin-bottom: 50px;
+                >li{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .winner4{
+            margin-bottom: 230px;
+            .tabMenu{
+                width: 100%;
+                flex-direction: column;
+                >li{
+                    margin: 10px 0;
+                    width: 90%;
+                }
+            }
+            .views{
+                height: 40vh;
+            }
+            .texts{
+                height: 100vh;
+                .textWrap{
+                    p{
+                        word-break: keep-all;
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}

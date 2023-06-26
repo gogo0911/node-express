@@ -47,7 +47,7 @@ body {
   background-color: #111;
 }
 .header .center {
-  width: 1200px;
+  width: 80%;
 }
 .header .center .top_header {
   display: flex;
@@ -56,7 +56,7 @@ body {
 .header .center .top_header .logo {
   margin: 5px 0;
   background-color: transparent;
-  margin-right: 160px;
+  margin-right: 10%;
   width: 130px;
 }
 .header .center .top_header .logo img {
@@ -254,7 +254,7 @@ body {
   background-color: #000;
 }
 .footer .center {
-  width: 1200px;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -317,10 +317,11 @@ body {
   font-size: 30px;
   font-weight: normal;
 }
-.cont1 .titleWrap > a {
+.cont1 .titleWrap .linkWrap > a {
   color: #c1c1c1;
+  margin-left: 10px;
 }
-.cont1 .titleWrap > a:hover {
+.cont1 .titleWrap .linkWrap > a:hover {
   color: #fff;
 }
 .cont1 .center {
@@ -339,11 +340,11 @@ body {
   background-size: cover;
 }
 .cont1 .center .prdImg img {
-  width: 500px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 500px;
 }
 .cont1 .center .detail {
   width: 20%;
@@ -426,6 +427,9 @@ body {
   .cont1 .center .prdImg {
     width: 100%;
     height: 500px;
+  }
+  .cont1 .center .prdImg img {
+    width: 300px;
   }
   .cont1 .center .detail {
     width: 100%;
