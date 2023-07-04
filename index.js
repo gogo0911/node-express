@@ -43,12 +43,16 @@ let local = ['store','mobile','login','forgotpass','service','join','account','c
 app.get("/",(req,res)=>{
     res.render("index",{login:req.user})
 })
-app.get(`/${local[0]}`,(req,res)=>{
-    db.collection("product").find().sort({num:-1}).toArray((err,result)=>{
-        //게시글 목록 데이터 전부 가지고 와서 목록페이지로 전달
-        res.render("store.ejs",{data:result,login:req.user})
-   })
-})
+// app.get(`/${local[0]}`,(req,res)=>{
+//     db.collection("product").find().toArray((err, total) => {
+//         db.collection("product").find().sort({num:-1}).toArray((err,result)=>{
+//             //게시글 목록 데이터 전부 가지고 와서 목록페이지로 전달
+//             db.collection('member').find()
+//             res.render("store.ejs",{total:total,login:req.user,text:""  })
+//             console.log(total);
+//         })
+//     })
+// })
 
 app.get(`/${local[1]}`,(req,res)=>{
     res.render(`${local[1]}`,{login:req.user})
@@ -164,13 +168,42 @@ app.post("/logincheck",passport.authenticate('local', {failureRedirect : '/login
 
  //상품등록
 
- //상품목록 페이지
+//  상품목록 페이지
 app.get("/store",(req,res)=>{
-    db.collection("product").find().sort({num:-1}).toArray((err,result)=>{
-         //게시글 목록 데이터 전부 가지고 와서 목록페이지로 전달
-         res.render("store.ejs",{data:result})
+    db.collection("product").find().toArray((err, result) => {
+            res.render("store.ejs",{data:result,login:req.user,texts:''})
+            console.log(result);
+        })
     })
- })
+//  검색처리
+ app.get("/search",(req,res)=>{
+    //검색조건 세팅
+    let check = [{
+        $search:{
+            //db사이트에서 검색엔진 설정한 이름값
+            index:"searchIndex",
+            text:{
+                //검색어 입력단어값
+                query:req.query.inputText,
+                //어떤항목을 검색할것인지
+                // path:[req.query.search,다음항목]-> 여러개 설정할 때는 배열로
+                path:req.query.search
+            }
+        }
+    },
+    { 
+        // 내림차순, 오름차순   
+        $sort:{ num:1}
+    },
+    // {$limit:2}
+    
+]
+        db.collection("product").aggregate(check).toArray((err,result)=>{
+            res.render("store",{data:result, text:req.query.inputText,login:req.user});
+            console.log(result);
+            //검색결과 데이터들만 보내줌
+        })
+    })
  
  //상품등록 페이지
  app.get("/store/insert",(req,res)=>{
@@ -249,5 +282,7 @@ app.get("/store",(req,res)=>{
         res.redirect("/store")
     })
 })
+
+
  
  

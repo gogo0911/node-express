@@ -383,6 +383,34 @@ body {
   -webkit-clip-path: polygon(0 0, 18% 0, 17% 100%, 0 100%);
           clip-path: polygon(0 0, 18% 0, 17% 100%, 0 100%);
 }
+.container #searchForm {
+  padding: 50px;
+  display: flex;
+  justify-content: end;
+}
+.container #searchForm select {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.container #searchForm #inputText {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #44d62c;
+  color: #fff;
+  margin: 0 10px;
+}
+.container #searchForm #searchBtn {
+  margin-right: 10%;
+  border: none;
+  background-color: transparent;
+  color: #44d62c;
+}
 .container .list {
   position: relative;
   margin: 30px 0;
