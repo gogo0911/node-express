@@ -172,7 +172,6 @@ app.post("/logincheck",passport.authenticate('local', {failureRedirect : '/login
 app.get("/store",(req,res)=>{
     db.collection("product").find().toArray((err, result) => {
             res.render("store.ejs",{data:result,login:req.user,texts:''})
-            console.log(result);
         })
     })
 //  검색처리
@@ -200,7 +199,6 @@ app.get("/store",(req,res)=>{
 ]
         db.collection("product").aggregate(check).toArray((err,result)=>{
             res.render("store",{data:result, text:req.query.inputText,login:req.user});
-            console.log(result);
             //검색결과 데이터들만 보내줌
         })
     })
